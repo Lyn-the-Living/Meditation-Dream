@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Garden</title>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene cursor="rayOrigin: mouse">
+         <a-assets>
+
+              <img
+                 id="skyTexture"
+                src="nightsky.png">
+
+                <a-asset-item
+                id="pinkstar"
+                src="starpink.glb">
+                </a-asset-item>
+
+                <a-asset-item
+                    id="purplestar"
+                    src="starpurple.glb">
+                </a-asset-item>
+
+                <a-asset-item
+                    id="whitestar"
+                    src="starwhite.glb">
+                </a-asset-item>
+
+          <a-asset-item 
+             id="moon3d" src="moon.glb">
+             </a-asset-item>
+    </a-assets>
+
+            <a-sky
+             src="#skyTexture"
+             rotation="-15 180 30">
+             </a-sky>
+    
+            <a-entity
+                gltf-model="#pinkstar"
+                position="0 2 0"
+                scale="1 1 1"
+                rotation="90 180 0"
+                animation="property: rotation; to: 45 360 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#purplestar"
+                position="5 3 -2"
+                scale="1 1 1"
+                rotation="66 37 127"
+                animation="property: rotation; to: 90 360 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#whitestar"
+                position="-4 3 -3"
+                scale="1 1 1"
+                rotation="34 137 105"
+                animation="property: rotation; to: 90 360 90; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#pinkstar"
+                position="-9.5 .57 -10"
+                scale="1 1 1"
+                rotation="90 180 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#purplestar"
+                position="-5 .57 -10"
+                scale="1 1 1"
+                rotation="90 180 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#whitestar"
+                position="5 .5 -5"
+                scale="1 1 1"
+                rotation="90 180 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#pinkstar"
+                position="9.5 .57 -10"
+                scale="1 1 1"
+                rotation="90 180 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#pinkstar"
+                position="18 .57 -7"
+                scale="5 5 5"
+                rotation="90 180 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#purplestar"
+                position="-29 -35 -16"
+                scale="20 20 20"
+                rotation="77.5 163 0"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#whitestar"
+                position="43 -35 -74"
+                scale="20 20 20"
+                rotation="75 -122 76"
+                animation="property: rotation; to: 72 62 0; loop: true; dur: 20000; easing: linear">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#whitestar"
+                position="-35 -130 -320"
+                scale="100 100 100"
+                rotation="70 180 -34"
+                animation="property: scale;
+               from: 100 100 100;
+               to: 105 105 105;
+               dir: alternate;
+               dur: 3000;
+               loop: true;
+               easing: easeInOutSine">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#pinkstar"
+                position="150 51 -123"
+                scale="100 100 100"
+                rotation="75 169 -155"
+                animation="property: scale;
+               from: 100 100 100;
+               to: 105 105 105;
+               dir: alternate;
+               dur: 3000;
+               loop: true;
+               easing: easeInOutSine">
+            </a-entity>
+
+            
+    <a-entity 
+        id="homeportal"
+        class="clickable"
+        gltf-model="#moon3d"
+        position="0 25 -45"
+        scale="1 1 1"
+        animation="property: scale; from: 1 1 1; to: 1.2 1.2 1.2; dir: alternate; loop: true; dur: 3000;">
+    </a-entity>">
+
+            <a-ocean
+                 color="#34045C"
+                width="600"
+                 depth="600"
+                 density="15"
+                 speed="2">
+         </a-ocean>
+
+        <a-plane
+            position="0 -5 0"
+            rotation="-90 0 0"
+            width="600"
+            height="600"
+            color="#B718B1"
+            material="transparent: true; opacity: 0.45;">
+        </a-plane>
+
+        <a-plane
+            position="0 -10 0"
+            rotation="-90 0 0"
+            width="600"
+            height="600"
+            color="#120020"
+            material="transparent: true; opacity: 0.45;">
+        </a-plane>
+
+        <a-plane
+            position="3 -20 0"
+            rotation="-90 0 0"
+            width="600"
+            height="200"
+            depth="200"
+            color="#000000">
+        </a-plane>
+        
+        <a-entity 
+        id="camera"
+        camera 
+        look-controls 
+        wasd-controls 
+        position="0 5 73.5">
+        <a-cursor
+            cursor="rayOrigin: mouse"
+            raycaster="objects: .clickable">
+        </a-cursor>
+        </a-entity> 
+        </a-scene>
+
+<script>
+const portal = document.querySelector('#homeportal');
+
+portal.addEventListener('click', function () {
+    window.location.href = 'index.html';
+});
+</script>
+</body>
+</html>

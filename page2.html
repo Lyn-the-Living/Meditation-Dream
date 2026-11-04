@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maze</title>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+ <script>
+AFRAME.registerComponent('portal-link', {
+  tick: function () {
+
+    const camera =
+      document.querySelector('[camera]').object3D.position;
+
+    const portal =
+      this.el.object3D.position;
+
+    if (camera.distanceTo(portal) < 2) {
+      window.location.href = 'index.html';
+    }
+  }
+});
+</script>
+    <a-scene>
+
+        <a-assets>
+            <a-asset-item id="maze" src="maze.glb"></a-asset-item>
+
+            <img
+             id="skyTexture"
+            src="nightsky.png">
+
+        </a-assets>
+
+        <a-sky
+            src="#skyTexture"
+            rotation="-15 180 30">
+         </a-sky>
+
+        <!-- Maze -->
+        <a-entity
+            gltf-model="#maze"
+            position="0 0 0"
+            scale="1 1 1">
+        </a-entity>
+
+    <a-sphere
+    portal-link
+    position="0 3 -10"
+    radius="2"
+    color="#FF00FF">
+</a-sphere>
+
+<a-light
+    type="point"
+    color="#FF00FF"
+    intensity="3"
+    position="0 3 -10">
+    
+</a-light>
+
+        <!-- Camera -->
+        <a-camera 
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true"
+            ></a-camera>
+</body>
+</html>

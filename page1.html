@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Dream Book</title>
+
+</head>
+<body>
+  
+<div class="flipbook">
+    <div><img src="images/bimage2.png"></div>
+    <div><img src="images/bimage3.png"></div>
+    <div><img src="images/bimage4.png"></div>
+    <div><img src="images/bimage5.png"></div>
+    <div><img src="images/bimage6.png"></div>
+    <div><img src="images/bimage7.png"></div>
+    <div><img src="images/bimage8.png"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="turnjs4/lib/turn.js"></script>
+
+<script>
+console.log("jQuery:", typeof $);
+console.log("turn:", typeof $.fn.turn);
+console.log("Pages:", $(".flipbook > div").length);
+</script>
+
+<script>
+$(function () {
+    $(".flipbook").turn({
+        width: 1100,
+        height: 300,
+        autoCenter: true
+    });
+});
+</script>
+
+<a href="Index.html" class="moon-button">
+    <img src="images/moon.png" alt="Home">
+</a>
+
+</body>
+</html>
