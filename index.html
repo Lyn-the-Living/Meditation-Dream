@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreaming</title>
+        <script 
+<script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+        </script>
+        
+    <script 
+        src="https://cdn.jsdelivr.net/npm/aframe-extras@7.5.4/dist/aframe-extras.min.js">
+    </script>
+    <script>
+        document.querySelector('.clickable')
+        .addEventListener('click', function () {
+        window.location.href = '1.html';
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene cursor="rayOrigin: mouse">
+
+        <a-assets>
+
+            <a-asset-item
+             id="gazeboModel"
+             src="gazebo4.glb">
+            </a-asset-item>
+
+            <img
+             id="skyTexture"
+            src="nightsky.png">
+
+        </a-assets>
+
+        <a-sky
+            src="#skyTexture"
+            rotation="-15 180 30">
+         </a-sky>
+
+        <a-entity
+            gltf-model="#gazeboModel"
+            position="0 0 0"
+            scale="1 1 1">
+        </a-entity>
+    
+        <a-ocean
+         color="#34045C"
+         width="600"
+         depth="600"
+         density="15"
+         speed="2">
+        </a-ocean>
+
+        <a-plane
+            position="0 -5 0"
+            rotation="-90 0 0"
+            width="200"
+            height="200"
+            color="#B718B1"
+            material="transparent: true; opacity: 0.45;">
+        </a-plane>
+
+        <a-plane
+            position="0 -10 0"
+            rotation="-90 0 0"
+            width="200"
+            height="200"
+            color="#120020"
+            material="transparent: true; opacity: 0.45;">
+        </a-plane>
+
+        <a-plane
+            position="3 -20 0"
+            rotation="-90 0 0"
+            width="200"
+            height="200"
+            depth="200"
+            color="#000000">
+        </a-plane>
+
+<a-sphere
+    position="-0.88 3.25 1.162"
+    radius="0.25"
+    color="#FA27FF"
+    material="shader: standard; emissive: #FA27FF; emissiveIntensity: 5"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;">
+</a-sphere>
+
+<a-sphere
+    position="-0.88 3.25 1.162"
+    radius="0.4"
+    color="#FA27FF"
+    material="transparent: true; opacity: 0.15;"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;
+    class="clickable"
+    onclick="window.location.href='page1.html'">
+</a-sphere>>
+
+<a-sphere
+    position="0.859 3.25 1.162"
+    radius="0.25"
+    color="#FA27FF"
+    material="shader: standard; emissive: #FA27FF; emissiveIntensity: 5"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;">
+</a-sphere>
+
+<a-sphere
+    position="0.859 3.25 1.162"
+    radius="0.4"
+    color="#FA27FF"
+    material="transparent: true; opacity: 0.15;"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;
+    class="clickable"
+    onclick="window.location.href='page5.html'">
+</a-sphere>>
+
+<a-sphere
+    position="1.407 3.25 -0.473"
+    radius="0.25"
+    color="#FA27FF"
+    material="shader: standard; emissive: #FA27FF; emissiveIntensity: 5"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;">
+</a-sphere>
+
+<a-sphere
+    position="1.407 3.25 -0.473"
+    radius="0.4"
+    color="#FA27FF"
+    material="transparent: true; opacity: 0.15;"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;
+    class="clickable"
+    onclick="window.location.href='page4.html'">
+</a-sphere>>
+
+<a-sphere
+    position="-1.407 3.25 -0.473"
+    radius="0.25"
+    color="#FA27FF"
+    material="shader: standard; emissive: #FA27FF; emissiveIntensity: 5"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;">
+</a-sphere>
+
+<a-sphere
+    position="-1.407 3.25 -0.473"
+    radius="0.4"
+    color="#FA27FF"
+    material="transparent: true; opacity: 0.15;"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;
+    class="clickable"
+    onclick="window.location.href='page2.html'">
+</a-sphere>>
+
+<a-sphere
+    position="-.001 3.25 -1.506"
+    radius="0.25"
+    color="#FA27FF"
+    material="shader: standard; emissive: #FA27FF; emissiveIntensity: 5"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;">
+</a-sphere>
+
+<a-sphere
+    position="-.001 3.25 -1.506"
+    radius="0.4"
+    color="#FA27FF"
+    material="transparent: true; opacity: 0.15;"
+    animation="property: scale; from: .75 .75 .75; to: 1 1 1; dir: alternate; loop: true; dur: 3000;
+    class="clickable"
+    onclick="window.location.href='page3.html'">
+</a-sphere>>
+
+    <a-entity 
+        camera look-controls 
+        wasd-controls 
+        position="0 2 8">
+        <a-cursor
+            fuse="false"
+            raycaster="objects: .clickable">
+        </a-cursor>
+    </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
